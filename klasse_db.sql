@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Mar 04, 2018 at 05:42 PM
+-- Generation Time: Mar 05, 2018 at 02:47 PM
 -- Server version: 10.1.30-MariaDB
 -- PHP Version: 5.6.33
 
@@ -111,7 +111,8 @@ CREATE TABLE `prof_details` (
 --
 
 INSERT INTO `prof_details` (`id`, `name`, `email`, `course`, `password`, `username`) VALUES
-(1, 'Jit Biswas', 'jit_biswas@mymail.sutd.edu.sg', '50', 'jit123', 'jit_biswas');
+(1, 'Jit Biswas', 'jit_biswas@mymail.sutd.edu.sg', '50', 'jit123', 'jit_biswas'),
+(2, 'Subhajit Datta', 'subhajit_datta@mymail.sutd.edu.sg`', '50', 'subhajit123', 'subhajit_datta');
 
 -- --------------------------------------------------------
 
@@ -159,6 +160,14 @@ CREATE TABLE `student_details` (
   `class` int(11) NOT NULL,
   `password` varchar(32) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `student_details`
+--
+
+INSERT INTO `student_details` (`id`, `name`, `email`, `student_id`, `class`, `password`) VALUES
+(1, 'Roshni Saravanan', 'roshni_saravanan@mymail.sutd.edu.sg', 1001344, 1, 'roshni123'),
+(2, 'Anwesha Biswas', 'anwesha_biswas@mymail.sutd.edu.sg', 1002375, 1, 'anwesha123');
 
 --
 -- Indexes for dumped tables
@@ -256,7 +265,7 @@ ALTER TABLE `feedback_details`
 -- AUTO_INCREMENT for table `prof_details`
 --
 ALTER TABLE `prof_details`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `quiz_details`
@@ -274,7 +283,7 @@ ALTER TABLE `quiz_student_answer`
 -- AUTO_INCREMENT for table `student_details`
 --
 ALTER TABLE `student_details`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
