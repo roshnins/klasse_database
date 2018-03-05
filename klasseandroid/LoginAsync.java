@@ -31,7 +31,7 @@ public class LoginAsync extends AsyncTask<String,Void,String> {
     protected String doInBackground(String... params) {
         String type = params[0];
         // if code doesnt run, change login_url to actual ip address. which you can get by command proompt -> ipconfig -> see ipv4 adress in wireless LAN adapter
-        String login_url= "http://10.0.2.2/login.php";
+        String login_url= "http://192.168.0.4/klasse/login.php";
         if (type.equals("login")){
             try {
                 String email = params[1];
