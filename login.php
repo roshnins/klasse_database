@@ -23,7 +23,7 @@
 <html>
 <head><title>Login</title></head>
     <body>
-        <h1>Login Example|<a href=”http://www.kosalgeek.com”>KosalGeek</a></h1>
+        <h1>KLASSE Login<a href=”http://www.kosalgeek.com”></a></h1>
         <form action="<?PHP $_PHP_SELF ?>" method="post">
             Username <input type="text" name="txtUsername" value="" /><br/>
             Password <input type="password" name="txtPassword" value="" /><br/>
