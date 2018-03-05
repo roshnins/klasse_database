@@ -14,7 +14,7 @@
                 echo "success"; 
                 exit; 
             } 
-            header("location: index.php"); //replace index.php with your url
+            //header("location: index.php"); //replace index.php with your url
         } else{ 
             echo "Login Failed <br/>"; 
         } 
@@ -31,3 +31,4 @@
         </form>
     </body>
 </html>
+
