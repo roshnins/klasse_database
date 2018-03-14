@@ -1,11 +1,11 @@
 <?PHP
     include_once("connection.php"); 
-    if( isset($_POST['email']) && isset($_POST['password']) ) { 
-        $username = $_POST['email'];
-        $password = $_POST['password'];
+    if( isset($_POST['txtUsername']) && isset($_POST['txtPassword']) ) { 
+        $username = $_POST['txtUsername'];
+        $password = $_POST['txtPassword'];
         
-        $query = "SELECT email, password FROM student_details ". 
-        " WHERE email = '$email' AND password = '$password'"; 
+        $query = "SELECT username, password FROM prof_details ". 
+        " WHERE username = '$username' AND password = '$password'"; 
         
         $result = mysqli_query($conn, $query);
         
@@ -20,5 +20,15 @@
         } 
     } 
 ?>
-
+<html>
+<head><title>Login</title></head>
+    <body>
+        <h1>KLASSE Login<a href=”http://www.kosalgeek.com”></a></h1>
+        <form action="<?PHP $_PHP_SELF ?>" method="post">
+            Username <input type="text" name="txtUsername" value="" /><br/>
+            Password <input type="password" name="txtPassword" value="" /><br/>
+            <input type="submit" name="btnSubmit" value="Login"/>
+        </form>
+    </body>
+</html>
 
