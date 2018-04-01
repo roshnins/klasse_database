@@ -8,7 +8,7 @@ if( isset($_POST['user_id']) && isset($_POST['password']) )
         $password = $_POST['password'];
 
         
-        $query = "SELECT user_id, password,name FROM users WHERE user_id = '$user_id' AND password = '$password'"; 
+        $query = "SELECT user_id, password,name,type FROM users WHERE user_id = '$user_id' AND password = '$password'"; 
         
         $result = mysqli_query($con, $query);
        
@@ -17,7 +17,10 @@ if( isset($_POST['user_id']) && isset($_POST['password']) )
         if($result->num_rows > 0)
          {
            while($row = mysqli_fetch_assoc($result))
-	     echo $row['name'];
+		{
+		
+	        echo $row['name'].",".$row['type'];
+		}
        	 } 
 
        else
